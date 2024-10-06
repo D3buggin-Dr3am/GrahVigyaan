@@ -1,0 +1,124 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://images.unsplash.com/photo-1456154875099-97a3a56074d3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D'); /* Example galaxy background */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  position: relative; /* Relative positioning for absolute children */
+}
+
+.quiz-container {
+  padding: 20px;
+  text-align: center;
+  width: 400px; /* Set a fixed width for the quiz container */
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+#question-box {
+  margin-top: 20px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column; /* Stack options vertically */
+  align-items: center;
+}
+
+#options button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Make button full width */
+}
+
+#options button:hover {
+  background-color: #555;
+}
+
+#options button.correct {
+  background-color: rgb(58, 171, 6); /* Correct answer color */
+}
+
+#options button.incorrect {
+  background-color: rgb(118, 17, 17); /* Incorrect answer color */
+}
+
+#feedback {
+  margin: 10px 0;
+}
+
+#level-container {
+  margin-top: 20px;
+}
+
+#next-button {
+  margin-top: 20px; /* Space above the button */
+  padding: 15px 30px; /* Larger button */
+  background-color: #8138e7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 18px; /* Slightly larger font size */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Full width */
+}
+
+#next-button:hover {
+  background-color: #311050e6; /* Darker blue on hover */
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Make sure it's on top */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s; /* Transition for fading effect */
+}
+
+.popup.show {
+  opacity: 1; /* Show pop-up */
+}
+
+.popup-image {
+  width: 300px; /* Size of the Mercury image */
+  animation: fadeIn 1s forwards, fadeOut 1s forwards 1s; /* Fade-in and fade-out animations */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

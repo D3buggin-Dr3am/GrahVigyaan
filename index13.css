@@ -1,0 +1,79 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+  --rpx: 100vw / 393;
+}
+
+.main-container {
+  overflow: hidden;
+  position: relative; /* Ensure positioning for the overlay */
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+/* The main div style */
+#hover-div {
+  width: 254px; 
+  height: 248px; 
+  background-position: center; 
+  background-image: url('./assets/images/3d3f122d-4907-4ae8-9f0a-5a0295b542aa.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  border-radius: 134.5px; 
+  position: absolute; 
+  top: 170px; 
+  left: 50%; 
+  transform: translate(-50%, 0); 
+  z-index: 92; 
+  cursor: pointer; 
+  transition: background-color 0.5s ease; /* Optional: transition effect for background */
+}
+
+/* Overlay to dim the background */
+.overlay {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 91; /* Layer under description */
+}
+
+/* Description style */
+#description {
+  display: none; 
+  position: absolute; 
+  top: 200%; /* Adjust position as needed */
+  left: 50%; 
+  transform: translate(-50%, 0); /* Center the description */
+  width: 150%; 
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+  color: white; 
+  font-size: 20px; 
+  padding: 10px; 
+  border-radius: 10px; 
+  z-index: 93;  
+}
+
+/* Show overlay and description on hover */
+#hover-div:hover + .overlay {
+  display: block; /* Show overlay when hovering over the #hover-div */
+}
+
+#hover-div:hover ~ #description {
+  display: block; /* Show description when hovering over the #hover-div */
+}

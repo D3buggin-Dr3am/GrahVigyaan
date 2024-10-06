@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exoplanet Quiz App</title>
+  <link rel="stylesheet" href="style12.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Exoplanet Quiz</h1>
+    <div id="question-box">
+      <p id="question">Loading...</p>
+      <div id="options"></div>       
+      <p id="feedback"></p>
+    </div>
+    <div id="level-container">
+      <p>Points: <span id="points">0</span></p>
+      <p>Level: <span id="level">1</span></p>
+    </div>
+    <button onclick="nextQuestion()" id="next-button" style="display:none;">Next</button>
+  </div>
+
+  <div id="popup" class="popup" style="display: none;">
+    <img src="mercury.svg" alt="Mercury" class="popup-image">
+    <button onclick="closePopup()" class="close-button">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
