@@ -28,7 +28,7 @@
 
 ## 🛠️ How to Use
 
-1. Download the folder and run the `index.html` file.
+1. Download the folder and run the `index.html` file or else go [Grah-Vigyaan Vercel](https://grah-vigyaan.vercel.app/). All pages are designed for mobile apps only. So they looks nice in mobile view only.
 2. **Choose Mode**:
    - **Learn about exoplanets**: Explore and understand different types of exoplanets through 2D visuals.
    - **Play the quiz game**: Answer exoplanet-related questions, score points, and unlock new levels.
